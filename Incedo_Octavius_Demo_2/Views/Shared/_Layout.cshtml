@@ -10,10 +10,10 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: orangered;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #1c324f;">
             <div class="container-fluid">
                 <!--<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Octavius</a>-->
-                <span class="navbar-brand">@Html.ActionLink("Octavius", "Index", "Home")</span>
+                <span class="navbar-brand">@Html.ActionLink("Octavius", "Index", "Home", null, new { id = "OT", style = "color: white" })</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,13 +21,13 @@
                 <div class="navbar-collapse collapse  justify-content-between">
                     <ul class="navbar-nav flex-grow-1 justify-content-end">
                         <li class="nav-item">
-                            <span class="nav-link text-dark" style="color:black">@Html.ActionLink("Home", "Index", "Home")</span>
+                            <span class="nav-link text-dark" style="color:black">@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-info ", @role = "button" })</span>
                         </li>
                         <li class="nav-item">
-                            <span class="nav-link text-dark">@Html.ActionLink("Medical Reps", "Index", "KOL_Image")</span>
+                            <span class="nav-link text-dark">@Html.ActionLink("Medical Reps", "Index", "KOL_Image", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-info ", @role = "button" })</span>
                         </li>
                         <li class="nav-item">
-                            <span class="nav-link text-dark">@Html.ActionLink("Business User", "Index", "BusinessUserHome")</span>
+                            <span class="nav-link text-dark">@Html.ActionLink("Business User", "Index", "BusinessUserHome", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-info ", @role = "button" })</span>
                         </li>
                         <!--
             <li class="nav-item">
@@ -67,7 +67,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.TimeOfDay - © Copyright 2022 Incedo Inc.</p>
         </footer>
     </div>
 

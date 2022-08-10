@@ -325,6 +325,7 @@
     <Compile Include="Controllers\BusinessUserHomeController.cs" />
     <Compile Include="Controllers\BusinessUserSpecialtyModelsController.cs" />
     <Compile Include="Controllers\degree_master_tableController.cs" />
+    <Compile Include="Controllers\HematologyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KOLController.cs" />
     <Compile Include="Controllers\KOL_DATAController.cs" />
@@ -333,6 +334,7 @@
     <Compile Include="Controllers\KOL_ImageController.cs" />
     <Compile Include="Controllers\kol_tableController.cs" />
     <Compile Include="Controllers\KOL_With_DegreeController.cs" />
+    <Compile Include="Controllers\OncologyController.cs" />
     <Compile Include="Data\Incedo_Octavius_Demo_2Context.cs" />
     <Compile Include="Data\Incedo_Octavius_Demo_2_BU_Spec_Context.cs" />
     <Compile Include="Data\Incedo_Octavius_Demo_2_degree_master_table_Context.cs" />
@@ -357,6 +359,7 @@
     <Compile Include="Models\kol_table.cs" />
     <Compile Include="Models\KOL_With_Degree.cs" />
     <Compile Include="Models\KOL_With_Degree_List.cs" />
+    <Compile Include="Models\ProfileStatusModel.cs" />
     <Compile Include="Models\SpecialtyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -480,6 +483,9 @@
     <Content Include="Views\BusinessUserSpecialtyModels\Details.cshtml" />
     <Content Include="Views\BusinessUserSpecialtyModels\Edit.cshtml" />
     <Content Include="Views\BusinessUserSpecialtyModels\Index.cshtml" />
+    <Content Include="Views\Oncology\Index.cshtml" />
+    <Content Include="Views\Hematology\Index.cshtml" />
+    <Content Include="Views\KOL_Image\ProfileIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Incedo_Octavius_Demo_2.Data;
@@ -46,7 +47,7 @@ namespace Incedo_Octavius_Demo_2.Controllers
                             SpecBU.MapID = Convert.ToInt32(dataSetObject.Tables[0].Rows[iCout]["MapID"]);
                             SpecBU.SpecialtyMap = dataSetObject.Tables[0].Rows[iCout]["SpecialtyMap"].ToString();
                             SpecBU.Parent_Specialty_ID = Convert.ToInt32(dataSetObject.Tables[0].Rows[iCout]["Parent_Speacialty_ID"]);
-                            SpecBU.SpecialtyID= Convert.ToInt32(dataSetObject.Tables[0].Rows[iCout]["SpecialityID"]);
+                            SpecBU.SpecialtyID = Convert.ToInt32(dataSetObject.Tables[0].Rows[iCout]["SpecialityID"]);
                             SpecBU.SpecialtyMaster = dataSetObject.Tables[0].Rows[iCout]["SpecialtyMaster"].ToString();
 
                             Spec_BU_List.Add(SpecBU);
@@ -78,6 +79,22 @@ namespace Incedo_Octavius_Demo_2.Controllers
             }
             return View(businessUserSpecialtyModel);
         }
+
+        //[HttpGet]
+        //public async Task<ActionResult> Index(string SpecialitySearch)
+        //{
+        //    ViewData["Getspecialitydetails"] = SpecialitySearch;
+        //    var empquery = '';
+        //    //var empquery = from x in db.BusinessUserSpecialtyModels select x;
+        //    //if (!String.IsNullOrEmpty(SpecialitySearch))
+        //    //{
+        //    //    empquery = empquery.Where(x => x.SpecialtyMap.Contains(SpecialitySearch) || x.SpecialtyMaster.Contains(SpecialitySearch));
+
+        //    //}
+        //    return View(await empquery.AsNoTracking().ToListAsync());
+        //}
+
+
 
         // GET: BusinessUserSpecialtyModels/Create
         public ActionResult Create()

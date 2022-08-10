@@ -9,16 +9,26 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<form method="get" asp-action="Index">
+    <p>
+        <input type="search" placeholder="enter SpecialityMap or SpecialityMaster..." value="@ViewData["Getspecialitydetails"]" name="SpecialitySearch" style="width:500px;" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+        <a asp-action="Index">Get all Speciality</a>
+    </p>
+</form>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.SpecialtyMap)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SpecialtyMaster)
-        </th>
-        <th></th>
-    </tr>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecialtyMap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecialtyMaster)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
 
 @foreach (var item in Model) {
     <tr>
